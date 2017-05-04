@@ -2,6 +2,8 @@ var path = require('path')
 var webpack = require('webpack')
 var Dotenv = require('dotenv-webpack')
 
+console.log(Dotenv)
+
 module.exports = {
     entry: './src/main.js',
     output: {
@@ -23,8 +25,14 @@ module.exports = {
         // Avoid publishing files when compilation fails
         // new webpack.NoEmitOnErrorsPlugin(),
         new Dotenv({
-          path: './.env.local'
-        })
+          path: '.env.local',
+          systemvars: true
+        }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //   compress: {
+        //     warnings: false
+        //   }
+        // })
     ],
     stats: {
         // Nice colored output
