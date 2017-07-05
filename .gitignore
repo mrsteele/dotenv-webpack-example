@@ -5,3 +5,4 @@ node_modules
 
 # Built by webpack
 build/
+package-lock.json
