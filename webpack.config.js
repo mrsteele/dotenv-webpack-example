@@ -2,8 +2,6 @@ var path = require('path')
 var webpack = require('webpack')
 var Dotenv = require('dotenv-webpack')
 
-console.log(Dotenv)
-
 module.exports = {
     entry: './src/main.js',
     output: {
