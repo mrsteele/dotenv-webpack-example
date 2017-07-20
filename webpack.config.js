@@ -20,29 +20,11 @@ module.exports = {
         ]
     },
     plugins: [
-        // Avoid publishing files when compilation fails
         // new webpack.NoEmitOnErrorsPlugin(),
-        new webpack.DefinePlugin({
-          'process.env': {
-            'TTT': '"Whatever"'
-          }
-          // 'process.env.TTT': 'works!',
-          // 'process.env': {
-          //   'test3': 'haha!'
-          // }
-        }),
         new Dotenv({
           path: '.env.local',
           systemvars: true
-        }),
-        // new webpack.DefinePlugin({
-        //   'process.env.test2': 'works2!',
-        // }),
-        // new webpack.optimize.UglifyJsPlugin({
-        //   compress: {
-        //     warnings: false
-        //   }
-        // })
+        })
     ],
     stats: {
         // Nice colored output
