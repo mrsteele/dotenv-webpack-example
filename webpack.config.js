@@ -3,19 +3,11 @@ var webpack = require('webpack')
 var Dotenv = require('dotenv-webpack')
 
 module.exports = {
-  entry: './src/main.js',
-  output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'bundle.js'
-  },
   module: {
-    loaders: [
+    rules: [
       {
         loader: 'babel-loader',
-        test: path.join(__dirname, 'src'),
-        query: {
-          presets: 'es2015'
-        }
+        test: path.join(__dirname, 'src')
       }
     ]
   },
