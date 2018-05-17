@@ -14,7 +14,7 @@ module.exports = {
   plugins: [
     // new webpack.NoEmitOnErrorsPlugin(),
     new Dotenv({
-      path: '.env.local',
+      path: path.resolve(__dirname, '.env.local'),
       systemvars: true
     }),
     new webpack.DefinePlugin({

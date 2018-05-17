@@ -12,7 +12,7 @@ console.log('we are here')
 console.log('process.env', process.env)
 
 document.querySelector('body').innerHTML = `
-  env: ${process.env.TEST}<br />
+  env: ${process.env.TEST2}<br />
   define: ${process.env.SUPERTEST}<br />
   all: ${JSON.stringify(process.env)}
 `
