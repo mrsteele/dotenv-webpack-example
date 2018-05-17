@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "predev": "npm run build",
     "start": "npm run dev",
     "dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
