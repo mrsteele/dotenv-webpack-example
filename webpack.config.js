@@ -6,16 +6,21 @@ module.exports = {
   module: {
     rules: [
       {
-        loader: 'babel-loader',
-        test: path.join(__dirname, 'src')
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       }
     ]
   },
   plugins: [
     // new webpack.NoEmitOnErrorsPlugin(),
     new Dotenv({
-      path: path.resolve(__dirname, './src/.env.testing'),
-      systemvars: true
+      path: path.resolve(__dirname, './src/.env.testing')
     }),
     new webpack.DefinePlugin({
       'process.env.SUPERTEST': JSON.stringify('This is a test')

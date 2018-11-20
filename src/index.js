@@ -1,18 +1,5 @@
-// const { TEST, TEST2 } = process.env
-//
-// document.querySelector('body').innerHTML = `
-//   Structured: ${process.env.TEST}<br />
-//   Destructured: ${TEST}<br />
-//   <hr />
-//   Structured: ${process.env.TEST2}<br />
-//   Destructured: ${TEST2}<br />
-// `
-
-console.log('we are here')
+const { TEST, TEST2 } = process.env
 console.log('process.env', process.env)
-
-document.querySelector('body').innerHTML = `
-  env: ${process.env.TEST2}<br />
-  define: ${process.env.SUPERTEST}<br />
-  all: ${JSON.stringify(process.env)}
-`
+console.log('process.env.TEST', process.env.TEST)
+console.log('TEST', TEST)
+console.log('TEST2', TEST2)
